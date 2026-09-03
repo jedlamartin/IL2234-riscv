@@ -14,6 +14,7 @@
 #                *.c *.h *.S *.s *.ld *.sh Makefile *.mk *.coe README.md
 #                (build artifacts *.o *.elf *.bin *.map *.d ... are ignored)
 #   report/   -> *.pdf only
+#   docs/     -> documentation files (*.md *.pdf *.txt *.png *.jpg)
 #   (.gitkeep is allowed everywhere so empty folders stay in the repo)
 # =====================================================================
 
@@ -27,6 +28,7 @@
 !/constr/
 !/firmware/
 !/report/
+!/docs/
 
 # ── 2. fpga/ — only .sv (any depth) ──────────────────────────────────
 fpga/**
@@ -66,3 +68,14 @@ report/**
 !report/**/
 !report/**/*.pdf
 !report/**/.gitkeep
+
+# ── 7. docs/ — documentation and notes ────────────────────────────────
+docs/**
+!docs/**/
+!docs/**/*.md
+!docs/**/*.txt
+!docs/**/*.pdf
+!docs/**/*.png
+!docs/**/*.jpg
+!docs/**/*.jpeg
+!docs/**/.gitkeep
