@@ -1,10 +1,11 @@
-module alu
-#(parameter BW = 32)(
-    input logic [BW-1:0]  in_a,
-    input logic [BW-1:0]  in_b,
-    input logic [3:0]     opcode,
-    output logic [BW-1:0] out,
-    output logic [2:0]    flags // {overflow, negative, zero}
+module alu #(
+    parameter BW = 32
+) (
+    input  logic [BW-1:0]  in_a,
+    input  logic [BW-1:0]  in_b,
+    input  logic [3:0]     opcode,
+    output logic [BW-1:0]  out,
+    output logic [2:0]     flags // {overflow, negative, zero}
 );
 
 typedef enum logic [3:0] {
@@ -19,7 +20,7 @@ typedef enum logic [3:0] {
     OR     = 4'b1100,
     AND    = 4'b1110,
     PASS_B = 4'b1111
-} alu_op_e;
+} alu_op_t;
 
 logic [$clog2(BW)-1:0] shamt;
 logic overflow, negative, zero;

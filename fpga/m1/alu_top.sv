@@ -89,9 +89,9 @@ typedef enum logic [1:0] {
     OP2 = 2'd1,
     OPC = 2'd2,
     RES = 2'd3
-} state_e;
+} state_t;
 
-state_e state, next_state;
+state_t state, next_state;
 
 // State update
 always_ff @(posedge clk) begin

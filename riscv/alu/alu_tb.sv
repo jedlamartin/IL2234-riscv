@@ -22,9 +22,9 @@ typedef enum logic [3:0] {
     OR     = 4'b1100,
     AND    = 4'b1110,
     PASS_B = 4'b1111
-} alu_op_e;
+} alu_op_t;
     
-alu #(.BW(BW)) alu(
+alu #(.BW(BW)) uut(
     .in_a(in_a), 
     .in_b(in_b), 
     .opcode(opcode),
